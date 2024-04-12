@@ -1,4 +1,4 @@
-Este es el repositorio del grupo "Empanadas de software", cuyos integrantes son:
+Este es el repositorio del grupo "Empanadas de Software", cuyos integrantes son:
 
 # Grupo Empanadas de software
 * Geraldine Cornejo - 202173529-1
