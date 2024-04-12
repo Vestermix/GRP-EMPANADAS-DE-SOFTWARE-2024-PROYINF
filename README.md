@@ -7,4 +7,4 @@ Este es el repositorio del grupo "Empanadas de software", cuyos integrantes son:
 
 
 ## WIKI
-
+* [WIKI](https://github.com/Vestermix/GRP-EMPANADAS-DE-SOFTWARE-2024-PROYINF/wiki)
