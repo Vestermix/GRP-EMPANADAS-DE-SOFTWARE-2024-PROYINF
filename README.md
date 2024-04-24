@@ -9,7 +9,7 @@ Este es el repositorio del grupo "Empanadas de Software", cuyos integrantes son:
 ## WIKI
 * [Wiki grupo empanadas de software](https://github.com/Vestermix/GRP-EMPANADAS-DE-SOFTWARE-2024-PROYINF/wiki)
 
-### Instrucciones de uso para la interfaz 
+## Instrucciones de uso para la interfaz 
 (Todo funciona con enlaces en botones, por lo que es importante que no se desplace a lo largo del archivo sin ser direccionado por un botón)
 * Primero, como es un archivo pdf, la página se debe ajustar de acuerdo a la pantalla.
 * Luego, se simula cómo la aplicación es capaz de cargar una carpeta. Cuando se hace click en seleccionar carpeta, esta lleva a la visualización de las imágenes donde hay botones para moverse entre imágenes y un botón para ir al buscador DICOM.
