@@ -14,3 +14,7 @@ Este es el repositorio del grupo "Empanadas de Software", cuyos integrantes son:
 * Primero, como es un archivo pdf, este debe descargarse y la página se debe ajustar de acuerdo al tamaño de la pantalla.
 * Luego, se simula cómo la aplicación es capaz de cargar una carpeta. Cuando se hace click en seleccionar carpeta, esta lleva a la visualización de las imágenes donde hay botones para moverse entre imágenes y un botón para ir al buscador DICOM.
 * En el buscador DICOM dejamos unos ejemplos de su funcionamiento, donde si se aprieta en el tipo de filtro saldrá una búsqueda y luego se debe apretar en la lupa para hacer la búsqueda. Esta página cuenta con dos botones extras: uno que es para reestablecer la búsqueda (flecha girando), donde se borran los filtros, y otro donde se puede volver a la visualización de imágenes (casita).
+
+## Video Explicativo
+* Video explicando el prototipo - Hito 4
+  https://youtu.be/BRtxL4Nvu2Q
