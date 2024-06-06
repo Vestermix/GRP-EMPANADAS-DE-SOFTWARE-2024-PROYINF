@@ -16,5 +16,7 @@ Este es el repositorio del grupo "Empanadas de Software", cuyos integrantes son:
 * En el buscador DICOM dejamos unos ejemplos de su funcionamiento, donde si se aprieta en el tipo de filtro saldrá una búsqueda y luego se debe apretar en la lupa para hacer la búsqueda. Esta página cuenta con dos botones extras: uno que es para reestablecer la búsqueda (flecha girando), donde se borran los filtros, y otro donde se puede volver a la visualización de imágenes (casita).
 
 ## Video Explicativo
-* Video explicando el prototipo - Hito 4
-  https://youtu.be/BRtxL4Nvu2Q
+* Video explicando el prototipo - Hito 4 -
+https://youtu.be/BRtxL4Nvu2Q
+* Archivo VisualizadorDicom.py, se encuentra en carpeta funcionalidadesBase, es el único archivo python a utilizar en esta entrega
+* Paso_a_paso_creacion_proyecto.txt es un archivo donde se explica la creación del entorno de proyecto
