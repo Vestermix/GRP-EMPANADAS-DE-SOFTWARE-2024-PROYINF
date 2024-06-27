@@ -20,3 +20,5 @@ Este es el repositorio del grupo "Empanadas de Software", cuyos integrantes son:
 https://youtu.be/BRtxL4Nvu2Q
 * Archivo VisualizadorDicom.py, se encuentra en carpeta funcionalidadesBase, es el único archivo python a utilizar en esta entrega
 * Paso_a_paso_creacion_proyecto.txt es un archivo donde se explica la creación del entorno de proyecto
+# HITO 5
+* LINK A VIDEO: https://youtu.be/P2pTEBZrhxI
