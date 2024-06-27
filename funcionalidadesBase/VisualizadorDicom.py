@@ -32,6 +32,44 @@ def redimensionar_imagen(img_data, nuevo_ancho, nuevo_alto):
     _, img_png = cv2.imencode('.png', img_resized)
     return img_png.tobytes()
 
+# Función para aplicar filtros a los datos DICOM
+def filtrar_datos_dicom(ds, filtro, valor):
+    resultados = []
+    for elem in ds:
+        if filtro == "Nombre Dato" and elem.name.replace("'","").lower().find(valor.replace("'","").lower()) != -1:
+            if elem.VR == "SQ":
+                resultados.append("------------------")
+                for e in elem:
+                    resultados.append(f"    {e}")
+                resultados.append("------------------")
+            else:
+                resultados.append(elem)
+        elif filtro == "Grupo DICOM" and valor in f"{elem.tag.group:04x}":
+            if elem.VR == "SQ":
+                resultados.append("------------------")
+                for e in elem:
+                    resultados.append(f"    {e}")
+                resultados.append("------------------")
+            else:
+                resultados.append(elem)
+        elif filtro == "Número de elemento" and valor in f"{elem.tag.element:04x}":
+            if elem.VR == "SQ":
+                resultados.append("------------------")
+                for e in elem:
+                    resultados.append(f"    {e}")
+                resultados.append("------------------")
+            else:
+                resultados.append(elem)
+        elif filtro == "Tipo de valor" and elem.VR == valor.upper():
+            if elem.VR == "SQ":
+                resultados.append("------------------")
+                for e in elem:
+                    resultados.append(f"    {e}")
+                resultados.append("------------------")
+            else:
+                resultados.append(elem)
+    return resultados
+
 # Define el diseño de la ventana principal
 layout = [
     [sg.Text("Seleccione la carpeta de trabajo")],
@@ -85,10 +123,10 @@ while True:
                     layout_imagen_dicom = [
                         [sg.Text(archivos_dicom[indice_imagen_seleccionada], key="-FILENAME-", size=(80, 1), justification='center', expand_x=True),
                          sg.Text("Buscar: "), sg.InputText(key="-SEARCH-", size=(20, 1), justification='right'), 
-                         sg.Combo(filtros_disponibles, default_value=filtros_disponibles[0], key="-FILTER-", enable_events=True),
+                         sg.Combo(filtros_disponibles, default_value=filtros_disponibles[0], key="-FILTER-", enable_events=True, readonly=True),
                          sg.Button("Buscar", key="-BUTTON-", size=(10, 1))],
                         [sg.Image(key="-IMAGE-", background_color="black", expand_x=True, expand_y=True),
-                         sg.Multiline(key="-INFO-", size=(50, 20), expand_x=True, expand_y=True)],
+                         sg.Multiline(key="-INFO-", size=(50, 20), expand_x=True, expand_y=True, disabled=True)],
                         [sg.Button("🡸", key="-PREV-", size=(15, 1)), sg.Button("🡺", key="-NEXT-", size=(15, 1))]
                     ]
 
@@ -100,6 +138,7 @@ while True:
                         resizable=True, 
                         size=(1850, 925)  # Tamaño inicial de la ventana
                     )
+
                     # Establece el índice de la imagen actual
                     indice_actual = indice_imagen_seleccionada
                     while True:
@@ -113,7 +152,7 @@ while True:
                             window_imagen_dicom["-INFO-"].update(value=info_dicom)
                             window_imagen_dicom["-FILENAME-"].update(value=archivos_dicom[indice_actual])
                         # Espera eventos de la ventana de imagen DICOM
-                        event_imagen, _ = window_imagen_dicom.read()
+                        event_imagen, values_imagen = window_imagen_dicom.read()
                         if event_imagen == sg.WINDOW_CLOSED:
                             break
                         elif event_imagen in ("-PREV-", "-NEXT-"):
@@ -126,6 +165,7 @@ while True:
                                 indice_actual += 1
                                 if indice_actual >= len(archivos_dicom):
                                     indice_actual = 0
+                            
                             # Lee el archivo DICOM seleccionado
                             img_data, info_dicom, ds = leer_dicom(os.path.join(carpeta_seleccionada, archivos_dicom[indice_actual]))
                             if img_data is not None and info_dicom is not None:
@@ -137,35 +177,36 @@ while True:
                                 window_imagen_dicom["-FILENAME-"].update(value=archivos_dicom[indice_actual])
                             else:
                                 sg.popup_error("Error al abrir el archivo DICOM.")
-                        elif event_imagen == "-SEARCH-":
-                            # Implementar la búsqueda
-                            pass
-                        elif event_imagen == "Filtros":
-                            # Implementar el menú de filtros
-                            filtro_seleccionado = window_imagen_dicom["-FILTER-"].get()
-                            if filtro_seleccionado:
-                                info_dicom = f"Filtrado por: {filtro_seleccionado}"
-                                window_imagen_dicom["-INFO-"].update(value=info_dicom)
+
                         elif event_imagen == "-BUTTON-":
                             
-                            ruta_completa = os.path.join(carpeta_seleccionada,  archivos_dicom[indice_actual])
-                            ds = pydicom.dcmread(ruta_completa)
-                            print(ds[0x10,0x10])
-                               
-                                #if filtro_seleccionado == "Nombre Dato":
-                                 #   pass
-                                #elif filtro_seleccionado == "Grupo DICOM":
-                                 #   pass
-                                #elif filtro_seleccionado == "Número de elemento":
-                                 #   pass
-                                #elif filtro_seleccionado == "Tipo de valor":                            
-                                 #   pass
+                            # Implementar la búsqueda
+                            valor_busqueda = values_imagen.get("-SEARCH-", "")
+                            filtro_seleccionado = values_imagen.get("-FILTER-", "")
+                            if valor_busqueda and filtro_seleccionado:
+                                resultados = filtrar_datos_dicom(ds, filtro_seleccionado, valor_busqueda)
+                                filtrados = "\n".join([str(elem) for elem in resultados])
                                 
+                                layout_filtro_dicom = [
+                                                [sg.Multiline(key="-INFO-", size=(50, 20), expand_x=True, expand_y=True, disabled=True )],
+                                            ]
+
+                                window_filtro_dicom = sg.Window(
+                                    "Filtro DICOM", 
+                                    layout_filtro_dicom, 
+                                    finalize=True, 
+                                    resizable=True, 
+                                    size=(800, 300)  # Tamaño inicial de la ventana
+                                )
+                               
+                                window_filtro_dicom["-INFO-"].update(value=filtrados)
+                            else:
+                                sg.popup("No se encontraron resultados para la búsqueda.")
+                            
                     window_imagen_dicom.close()
             else:
                 sg.popup_error("No se encontraron archivos DICOM en la carpeta seleccionada.")
-        else:
-            sg.popup("Por favor, seleccione una carpeta.")
+
 
 # Cierra la ventana principal al salir del bucle
 window.close()
