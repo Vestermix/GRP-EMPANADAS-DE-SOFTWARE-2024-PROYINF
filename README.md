@@ -1,9 +1,11 @@
 Este es el repositorio del grupo "Empanadas de Software", cuyos integrantes son:
 
-# Grupo Empanadas de software
+# Grupo Empanadas de Software
+(Actualizado semestre 2024 - 2)
 * Geraldine Cornejo - 202173529-1
 * Alonso Diaz - 202173602-6
 * Javiera Barrales - 202173536-4
+* Andrea Delgadillo - 202490508-2
 
 
 ## WIKI
@@ -22,3 +24,5 @@ https://youtu.be/BRtxL4Nvu2Q
 * Paso_a_paso_creacion_proyecto.txt es un archivo donde se explica la creación del entorno de proyecto
 # HITO 5
 * LINK A VIDEO: https://youtu.be/P2pTEBZrhxI
+
+# Trabajo semestre 2024 - 2
