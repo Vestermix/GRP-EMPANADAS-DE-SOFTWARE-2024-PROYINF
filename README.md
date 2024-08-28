@@ -26,4 +26,6 @@ https://youtu.be/BRtxL4Nvu2Q
 * LINK A VIDEO: https://youtu.be/P2pTEBZrhxI
 
 # Trabajo semestre 2024 - 2
-Proyecto base: El semestre pasado se trabajo en base a una característica requerida por el cliente, la cual consistía en hacer una cabecera DICOM y 
+Proyecto base: El semestre pasado se trabajo en base a una característica requerida por el cliente, la cual es: Mostrar información de la cabecera DICOM e incorporar un buscador.
+Este semestre se buscará finalizar el buscador y pulir el trabajo con lo aprendido en clases.
+
