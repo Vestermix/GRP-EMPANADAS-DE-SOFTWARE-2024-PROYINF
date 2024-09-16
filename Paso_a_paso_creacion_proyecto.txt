@@ -1,0 +1,10 @@
+Paso 1 Abrir visual, crear una carpeta para mantener el orden de los archivos, abrir una terminal powershell
+Paso 2 ejecutar, pip install virtualenv
+Paso 3 ejecutar, virtualenv env
+Paso 4 ejecutar, cd env/scripts
+Paso 5 ejecutar, ./activate (esto nos activa el modo env [lo que aisla todas las instalaciones del proyecto del resto del computador])
+Paso bonus(en caso de tener bloqueados los scripts usar comando "Set-ExecutionPolicy RemoteSigned", es posible tener que abrir visual o powershell en administrador)
+Paso 6 cd .., cd ..(Volver al directorio correcto)
+paso 7 pip install Django
+paso 8 arrastrar el contenido de ArchivosProyectoDjango a la carpeta creada inicialmente (que ahora mismo debería contener una carpeta llamada env)
+paso 9 python manage.py runserver (para correr la web de prueba)
