@@ -1,0 +1,19 @@
+{%extends 'cabecera.html'%}
+
+{%block content%}
+
+<h1>Formulario de registro</h1>
+
+<form action="/formulario/" method="POST">
+
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <button>
+        identificarse
+    </button>
+
+</form>
+
+{%endblock%}

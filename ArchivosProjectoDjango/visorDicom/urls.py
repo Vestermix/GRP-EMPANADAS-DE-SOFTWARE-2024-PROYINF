@@ -5,6 +5,8 @@ from . import views
 
 urlpatterns = [
 
-
-
+    path('', views.menuPrincipal, name='menu'),
+    path('formulario/', views.formulario, name='formulario'),
+    path('login/', views.login, name='login'),
+    path('cabecera/', views.cabecera, name='cabecera'),
 ]
