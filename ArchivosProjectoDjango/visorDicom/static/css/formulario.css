@@ -1,24 +1,39 @@
 /* archivo: styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #c86fc9ff;
     margin: 0;
     padding: 20px;
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #c86fc9ff;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;  /* Asegura que esté por encima de todo el contenido */
+}
+
+/* Estilo para el título */
 h2 {
     text-align: center;
     color: #333;
+    margin-bottom: 20px;
 }
-
+/* Ajuste el margen superior del formulario para evitar que quede oculto detrás de la cabecera */
 form {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 60px auto 0 auto;  /* Añadimos 60px de margen superior */
     background: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 
 label {
     display: block;
@@ -39,7 +54,7 @@ input[type="password"] {
 
 input[type="submit"] {
     width: 100%;
-    background-color: #5cb85c;
+    background-color: #c86fc9ff;
     color: white;
     padding: 10px;
     border: none;
@@ -49,10 +64,11 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #4cae4c;
+    background-color: #c86fc9ff;
 }
 
 p {
     color: red;
     font-style: italic;
 }
+

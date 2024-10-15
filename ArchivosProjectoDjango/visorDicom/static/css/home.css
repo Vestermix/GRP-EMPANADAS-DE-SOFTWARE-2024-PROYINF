@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #c86fc9ff;
     margin: 0;
     padding: 0;
 }
@@ -9,7 +9,7 @@ body {
 /* Estilo para el contenedor principal */
 .container {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 80px auto 20px auto;  /* Agrega un margin-top para que el contenido no quede debajo de la cabecera */
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -22,8 +22,29 @@ h1 {
     color: #333;
 }
 
-h2 {
-    color: #4CAF50;
+/* Estilo para la cabecera */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #c86fc9ff;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 2000;  /* Asegura que esté por encima de todo el contenido */
+}
+
+/* Estilos para los enlaces de la cabecera */
+.header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.header a:hover {
+    text-decoration: underline;
 }
 
 /* Estilo para la lista */
@@ -53,5 +74,6 @@ ul {
 @media screen and (max-width: 600px) {
     .container {
         padding: 10px;
+        margin-top: 80px; /* Asegúrate de que el margen superior también se ajuste en pantallas pequeñas */
     }
 }

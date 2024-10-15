@@ -3,17 +3,19 @@
 /* Estilo para la cabecera */
 .header {
     width: 100%;  /* La cabecera ocupa todo el ancho de la página */
-    background-color: #4CAF50;  /* Color de fondo verde */
+    background-color: #c86fc9ff;  /* Color de fondo verde */
     padding: 10px 20px;  /* Espaciado interno */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra ligera */
     display: flex;
     justify-content: center; /* Alinea los elementos dentro de la cabecera al centro */
     gap: 20px;  /* Añade espacio entre los enlaces */
+    text-align: center;
+    z-index: 1000;
 }
 
 /* Estilos para los enlaces dentro de la cabecera */
 .header a {
-    color: white;  /* Color del texto blanco */
+    color: #efeccaff;  /* Color del texto blanco */
     text-align: center;  /* Centrar el texto dentro del enlace */
     padding: 14px 20px;  /* Espaciado interno para hacer los enlaces más grandes */
     text-decoration: none;  /* Elimina el subrayado de los enlaces */
@@ -22,7 +24,7 @@
 
 /* Efecto al pasar el cursor por encima de los enlaces */
 .header a:hover {
-    background-color: #45a049;  /* Cambia el color de fondo en hover */
+    background-color: #610345ff;  /* Cambia el color de fondo en hover */
     border-radius: 4px;  /* Bordes redondeados en hover */
 }
 
