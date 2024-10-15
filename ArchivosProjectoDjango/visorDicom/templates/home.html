@@ -1,10 +1,40 @@
 {% extends "cabecera.html" %}
 
 {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor DICOM</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
 
-<h1>
-    <a href="/login/">Iniciar sesión</a><br>
-    <a href="/formulario/">Registrarse</a>
-</h1>
+<div class="container">
+    <h1>Bienvenido a Visor DICOM</h1>
+    <p>
+        Esta aplicación te permite gestionar y visualizar imágenes médicas DICOM de manera sencilla y eficiente. 
+        Como radiólogo o cardiólogo, podrás cargar imágenes, acceder a la información de la cabecera DICOM y navegar a través de tus registros médicos sin complicaciones.
+    </p>
+    <p>
+        Regístrate o inicia sesión para comenzar a utilizar todas las funcionalidades que nuestra plataforma tiene para ofrecerte.
+    </p>
+    <h2>Características Principales:</h2>
+    <ul>
+        <li>Carga y almacenamiento de imágenes DICOM.</li>
+        <li>Búsqueda avanzada de imágenes.</li>
+        <li>Acceso seguro con autenticación de usuario.</li>
+        <li>Visualización clara de la información de la cabecera DICOM.</li>
+    </ul>
+</div>
 
+<footer class="footer">
+    <div class="footer-content">
+        <h3>Información del Grupo</h3>
+        <p>
+            Grupo de Desarrollo de Software - Proyecto ISO<br>
+            Contacto: grupo@proyectoiso.com<br>
+            Todos los derechos reservados © 2024
+        </p>
+    </div>
+</footer>
 {% endblock %}

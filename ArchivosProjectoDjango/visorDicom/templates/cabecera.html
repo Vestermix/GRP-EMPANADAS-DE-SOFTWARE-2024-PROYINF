@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabecera</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/cabecera.css' %}">
 </head>
 
 <body>
     <div class="header">
-        <a href="/">Visor Dicom</a>
+        <a href="/">Home</a>
+        <a href="{% url 'formulario' %}">Formulario</a>
+        <a href="{% url 'login' %}">Login</a>
     </div>
 
     {% block content %}

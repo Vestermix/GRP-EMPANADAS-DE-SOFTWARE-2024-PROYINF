@@ -5,8 +5,9 @@ from . import views
 
 urlpatterns = [
 
-    path('', views.menuPrincipal, name='menu'),
-    path('formulario/', views.formulario, name='formulario'),
-    path('login/', views.login, name='login'),
+    path('', views.menuPrincipal, name='menu'), 
+    path('formulario/', views.formulario, name='formulario'),  # URL para el formulario
+    path('login/', views.login, name='login'),  # URL para el login
     path('cabecera/', views.cabecera, name='cabecera'),
+    path('sesion/', views.sesion, name='sesion'),
 ]

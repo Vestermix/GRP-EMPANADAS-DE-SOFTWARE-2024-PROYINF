@@ -1,19 +1,46 @@
-{%extends 'cabecera.html'%}
+{% extends 'cabecera.html' %}
 
-{%block content%}
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+</head>
+<body>
+    <h2>Formulario de Registro</h2>
+    
+    <form method="POST">
+        {% csrf_token %}
+        
+        <!-- Campo de nombre de usuario -->
+        <label for="username">Nombre de Usuario:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <!-- Campo de correo -->
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <!-- Campo de contraseña -->
+        <label for="password1">Contraseña:</label><br>
+        <input type="password" id="password1" name="password1" required><br><br>
+        
+        <!-- Campo de confirmación de contraseña -->
+        <label for="password2">Confirmar Contraseña:</label><br>
+        <input type="password" id="password2" name="password2" required><br><br>
 
-<h1>Formulario de registro</h1>
+        <!-- Mostrar errores si los hay -->
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        
+        <!-- Botón para enviar el formulario -->
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>
 
-<form action="/formulario/" method="POST">
-
-    {% csrf_token %}
-
-    {{form.as_p}}
-
-    <button>
-        identificarse
-    </button>
-
-</form>
-
-{%endblock%}
+{% endblock %}

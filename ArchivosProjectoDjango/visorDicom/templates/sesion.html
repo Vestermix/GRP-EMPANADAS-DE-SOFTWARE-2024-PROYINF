@@ -1,0 +1,23 @@
+{% extends 'cabecera.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+</head>
+<body>
+    <h2>Bienvenido a la Sesión</h2>
+    
+    <p>Hola, {{ user.username }}! Gracias por iniciar sesión.</p>
+
+    <div>
+        <p>En esta sección, podrás gestionar tus imágenes DICOM y acceder a todas las funcionalidades de la aplicación.</p>
+    </div>
+
+</body>
+</html>
+
+{% endblock %}
