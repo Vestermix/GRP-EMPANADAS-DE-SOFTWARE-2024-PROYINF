@@ -63,3 +63,6 @@ def formulario(request):
     
 def sesion(request):
     return render(request, 'sesion.html')
+
+def carpetas(request):
+    return render(request, 'carpetas.html')

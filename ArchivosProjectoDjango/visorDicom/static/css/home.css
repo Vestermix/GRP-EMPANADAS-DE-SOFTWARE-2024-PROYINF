@@ -1,17 +1,17 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #c86fc9ff;
+    background-color:  #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
 /* Estilo para el contenedor principal */
 .container {
-    max-width: 800px;
-    margin: 80px auto 20px auto;  /* Agrega un margin-top para que el contenido no quede debajo de la cabecera */
+    max-width: 900px;
+    margin: 20px auto 20px auto;  /* Agrega un margin-top para que el contenido no quede debajo de la cabecera */
     padding: 20px;
-    background-color: white;
+    background-color: rgb(91, 46, 92);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -19,43 +19,26 @@ body {
 /* Estilo para los encabezados */
 h1 {
     text-align: center;
-    color: #333;
+    color: #ffffff;
 }
-
-/* Estilo para la cabecera */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #c86fc9ff;
-    color: white;
-    padding: 10px 0;
+p {
     text-align: center;
-    z-index: 2000;  /* Asegura que esté por encima de todo el contenido */
+    color: #ffffff;
 }
-
-/* Estilos para los enlaces de la cabecera */
-.header a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-}
-
-.header a:hover {
-    text-decoration: underline;
+h2 {
+    color: #ffffff;
 }
 
 /* Estilo para la lista */
 ul {
     list-style-type: disc;
     padding-left: 20px;
+    color: #ffffff;
 }
 
 /* Estilo para el pie de página */
 .footer {
-    background-color: #333;
+    background-color: #025048ff;
     color: white;
     text-align: center;
     padding: 10px 0;

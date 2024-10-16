@@ -12,30 +12,6 @@ body {
     text-align: center;
 }
 
-/* Estilos para la cabecera */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #c86fc9ff;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000;  /* Asegura que esté por encima de todo el contenido */
-}
-
-.header a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-}
-
-.header a:hover {
-    text-decoration: underline;
-}
-
 /* Ajustes para el contenido principal */
 .container {
     margin-top: 60px; /* Espacio suficiente para evitar que el contenido quede debajo de la cabecera */
@@ -45,12 +21,15 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 100%;
+    margin: 100px auto 0 auto;
 }
 
 /* Estilo para el encabezado */
 h2 {
-    color: #4CAF50;
+    margin-bottom: 20px;
+    color: rgb(91, 46, 92);
     font-size: 28px;
+    margin: 100px auto 0 auto;
 }
 
 /* Estilo para los párrafos */

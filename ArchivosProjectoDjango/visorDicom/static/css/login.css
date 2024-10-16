@@ -11,9 +11,15 @@ body {
     flex-direction: column;
 }
 
+.header{
+    position: fixed;
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0;
+}
+
 /* Estilo para el contenedor del formulario */
 form {
-    background-color: white;
+    background-color: rgb(248, 247, 232);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -50,7 +56,7 @@ input[type="password"] {
 /* Botón para enviar el formulario */
 button[type="submit"] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #025048ff;
     color: white;
     padding: 10px;
     border: none;
@@ -60,7 +66,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: rgb(0, 41, 37);
 }
 
 /* Estilo para mostrar los errores */

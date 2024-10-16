@@ -10,4 +10,5 @@ urlpatterns = [
     path('login/', views.login, name='login'),  # URL para el login
     path('cabecera/', views.cabecera, name='cabecera'),
     path('sesion/', views.sesion, name='sesion'),
+    path('carpetas/', views.carpetas, name='carpetas'),
 ]

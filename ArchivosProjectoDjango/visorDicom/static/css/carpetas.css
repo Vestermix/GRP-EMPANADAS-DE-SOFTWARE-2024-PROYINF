@@ -1,0 +1,15 @@
+/* Estilos generales para el body */
+body {
+    
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+p{
+    margin: 300px auto 100 auto;
+}
