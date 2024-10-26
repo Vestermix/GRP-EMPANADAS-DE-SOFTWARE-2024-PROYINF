@@ -29,4 +29,18 @@ https://youtu.be/BRtxL4Nvu2Q
 # Trabajo semestre 2024 - 2
 Proyecto base: El semestre pasado se trabajo en base a una característica requerida por el cliente, la cual es: Mostrar información de la cabecera DICOM e incorporar un buscador.
 Este semestre se buscará finalizar el buscador y pulir el trabajo con lo aprendido en clases.
+## Hito 4
+Actualizaciones en código: Se implementaron los requerimientos en cuanto al procesamiento de imágenes Dicom, sin embargo, se nos hizo imposible integrarlo con lo que tenemos en Django (registro y login), lo cual quedará para la siguiente entrega.
+Estos archivos nuevos están en 'ArchivosProyectoDjango/dwv', el cual cuenta con varios zip, para poder ejecutar el visualizador se deben descomprimir todas las carpetas y ejecutar los comandos a continuación en consola.
+
+```bash
+# Desde la carpeta donde estará el Proyecto General, moverse al visualizador
+cd dwv
+
+# instalar las dependencias
+yarn install
+
+# ejecutar proyecto: abre una página automáticamente
+yarn run start
+```
 
