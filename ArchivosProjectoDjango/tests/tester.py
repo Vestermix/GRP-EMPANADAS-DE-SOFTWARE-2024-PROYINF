@@ -56,7 +56,7 @@ class TestRegister(unittest.TestCase):
         self.assertEqual(response.json()["message"], "El usuario ya existe")
 
     @classmethod
-    def tearDownClass(cls):
+    def tearDownClass(cls): #se supone que esta linea debe destruir el usuario creado en el test_registro_exitoso, sin embargo hay que desarrollar este punto y verificar su funcionamiento
         pass
 
 if __name__ == '__main__':
